@@ -1,0 +1,11 @@
+# exclude all dot files except .git files
+.*
+!.git*
+
+# exclude binaries and temporary files
+bin/
+bin_plugs/
+intermediate/
+intermediate_plugs/
+lib/
+*.aps

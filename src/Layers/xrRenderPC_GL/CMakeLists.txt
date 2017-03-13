@@ -1,0 +1,361 @@
+set(SOURCES
+	blender_bloom_build.cpp
+	blender_combine.cpp
+	blender_deffer_aref.cpp
+	blender_deffer_flat.cpp
+	blender_deffer_model.cpp
+	blender_light_direct.cpp
+	blender_light_mask.cpp
+	blender_light_occq.cpp
+	blender_light_point.cpp
+	blender_light_reflected.cpp
+	blender_light_spot.cpp
+	blender_luminance.cpp
+	blender_ssao.cpp
+	gl_loader.cpp
+	gl_rendertarget_accum_direct.cpp
+	gl_rendertarget_accum_omnipart_geom.cpp
+	gl_rendertarget_accum_point.cpp
+	gl_rendertarget_accum_point_geom.cpp
+	gl_rendertarget_accum_reflected.cpp
+	gl_rendertarget_accum_spot.cpp
+	gl_rendertarget_accum_spot_geom.cpp
+	gl_rendertarget_create_minmaxSM.cpp
+	gl_rendertarget_draw_rain.cpp
+	gl_rendertarget_draw_volume.cpp
+	gl_rendertarget_enable_scissor.cpp
+	gl_rendertarget_mark_msaa_edges.cpp
+	gl_rendertarget_phase_accumulator.cpp
+	gl_rendertarget_phase_bloom.cpp
+	gl_rendertarget_phase_combine.cpp
+	gl_rendertarget_phase_flip.cpp
+	gl_rendertarget_phase_luminance.cpp
+	gl_rendertarget_phase_occq.cpp
+	gl_rendertarget_phase_PP.cpp
+	gl_rendertarget_phase_rain.cpp
+	gl_rendertarget_phase_scene.cpp
+	gl_rendertarget_phase_smap_D.cpp
+	gl_rendertarget_phase_smap_S.cpp
+	gl_rendertarget_phase_ssao.cpp
+	r2_blenders.cpp
+	glResourceManager_Resources.cpp
+	glResourceManager_Scripting.cpp
+	glr_constants.cpp
+	glTexture.cpp
+	gl_R_render.cpp
+	r2_R_calculate.cpp
+	gl_rendertarget.cpp
+	r2_R_lights.cpp
+	gl_R_sun.cpp
+	r2_sector_detect.cpp
+	r3_R_rain.cpp
+	r3_R_sun_support.cpp
+	rgl.cpp
+	stdafx.cpp
+	xrRender_GL.cpp
+)
+
+set(HEADERS
+	blender_bloom_build.h
+	blender_combine.h
+	blender_deffer_aref.h
+	blender_deffer_flat.h
+	blender_deffer_model.h
+	blender_light_direct.h
+	blender_light_mask.h
+	blender_light_occq.h
+	blender_light_point.h
+	blender_light_reflected.h
+	blender_light_spot.h
+	blender_luminance.h
+	blender_ssao.h
+	gl_rendertarget_wallmarks.h
+	r2_types.h
+	gl_rendertarget.h
+	r3_R_sun_support.h
+	rgl.h
+	SMAP_Allocator.h
+	stdafx.h
+)
+
+set(RENDER_GL_SOURCES
+	../xrRenderGL/Blender_Recorder_GL.cpp
+	"../xrRenderGL/GL Rain/glRainBlender.cpp"
+	../xrRenderGL/glHW.cpp
+	../xrRenderGL/glBufferUtils.cpp
+	../xrRenderGL/glDetailManager_VS.cpp
+	../xrRenderGL/glMinMaxSMBlender.cpp
+	../xrRenderGL/glSH_RT.cpp
+	../xrRenderGL/glSH_Texture.cpp
+	../xrRenderGL/glState.cpp
+	../xrRenderGL/glStateUtils.cpp
+	../xrRenderGL/glTextureUtils.cpp
+	../xrRenderGL/MSAA/glMSAABlender.cpp
+)
+
+set(RENDER_GL_HEADERS
+	"../xrRenderGL/GL Rain/glRainBlender.h"
+	../xrRenderGL/glBufferUtils.h
+	../xrRenderGL/glMinMaxSMBlender.h
+	../xrRenderGL/glR_Backend_Runtime.h
+	../xrRenderGL/glr_constants_cache.h
+	../xrRenderGL/glState.h
+	../xrRenderGL/glStateUtils.h
+	../xrRenderGL/glTextureUtils.h
+	../xrRenderGL/MSAA/glMSAABlender.h
+)
+
+
+set(RENDER_SOURCES
+	../xrRender/Animation.cpp
+	../xrRender/Blender_BmmD.cpp
+	../xrRender/Blender_detail_still.cpp
+	../xrRender/Blender_Editor_Selection.cpp
+	../xrRender/Blender_Editor_Wire.cpp
+	"../xrRender/Blender_Lm(EbB).cpp"
+	../xrRender/Blender_Model_EbB.cpp
+	../xrRender/Blender_Particle.cpp
+	../xrRender/Blender_Recorder_R2.cpp
+	../xrRender/Blender_Recorder_StandartBinding.cpp
+	../xrRender/Blender_Screen_SET.cpp
+	../xrRender/Blender_tree.cpp
+	../xrRender/ColorMapManager.cpp
+	../xrRender/D3DUtils.cpp
+	../xrRender/Debug/dxPixEventWrapper.cpp
+	../xrRender/DetailManager_VS.cpp
+	../xrRender/du_box.cpp
+	../xrRender/du_cone.cpp
+	../xrRender/du_cylinder.cpp
+	../xrRender/du_sphere.cpp
+	../xrRender/du_sphere_part.cpp
+	../xrRender/dxApplicationRender.cpp
+	../xrRender/dxConsoleRender.cpp
+	../xrRender/dxDebugRender.cpp
+	../xrRender/dxEnvironmentRender.cpp
+	../xrRender/dxFontRender.cpp
+	../xrRender/dxLensFlareRender.cpp
+	../xrRender/dxObjectSpaceRender.cpp
+	../xrRender/dxRainRender.cpp
+	../xrRender/dxRenderFactory.cpp
+	../xrRender/dxStatGraphRender.cpp
+	../xrRender/dxThunderboltDescRender.cpp
+	../xrRender/dxThunderboltRender.cpp
+	../xrRender/dxUIRender.cpp
+	../xrRender/dxUISequenceVideoItem.cpp
+	../xrRender/dxUIShader.cpp
+	../xrRender/dxWallMarkArray.cpp
+	../xrRender/FLOD.cpp
+	../xrRender/FProgressive.cpp
+	../xrRender/FSkinned.cpp
+	../xrRender/FTreeVisual.cpp
+	../xrRender/FVisual.cpp
+	../xrRender/Light_Render_Direct.cpp
+	../xrRender/Light_Render_Direct_ComputeXFS.cpp
+	../xrRender/ModelPool.cpp
+	../xrRender/RenderAllocator.cpp
+	../xrRender/R_DStreams.cpp
+	../xrRender/r__screenshot.cpp
+	../xrRender/Shader.cpp
+	../xrRender/DetailManager.cpp
+	../xrRender/DetailManager_CACHE.cpp
+	../xrRender/DetailManager_Decompress.cpp
+	../xrRender/DetailManager_soft.cpp
+	../xrRender/DetailModel.cpp
+	../xrRender/dxParticleCustom.cpp
+	../xrRender/ETextureParams.cpp
+	../xrRender/FBasicVisual.cpp
+	../xrRender/FHierrarhyVisual.cpp
+	../xrRender/HOM.cpp
+	../xrRender/HWCaps.cpp
+	../xrRender/light.cpp
+	../xrRender/LightTrack.cpp
+	../xrRender/Light_DB.cpp
+	../xrRender/light_GI.cpp
+	../xrRender/Light_Package.cpp
+	../xrRender/light_smapvis.cpp
+	../xrRender/light_vis.cpp
+	../xrRender/occRasterizer.cpp
+	../xrRender/occRasterizer_core.cpp
+	../xrRender/ParticleEffect.cpp
+	../xrRender/ParticleEffectDef.cpp
+	../xrRender/ParticleGroup.cpp
+	../xrRender/PSLibrary.cpp
+	../xrRender/ResourceManager.cpp
+	../xrRender/ResourceManager_Loader.cpp
+	../xrRender/ResourceManager_Reset.cpp
+	../xrRender/R_Backend.cpp
+	../xrRender/R_Backend_DBG.cpp
+	../xrRender/R_Backend_hemi.cpp
+	../xrRender/R_Backend_Runtime.cpp
+	../xrRender/R_Backend_tree.cpp
+	../xrRender/R_Backend_xform.cpp
+	../xrRender/r_constants.cpp
+	../xrRender/r__dsgraph_build.cpp
+	../xrRender/r__dsgraph_render.cpp
+	../xrRender/r__dsgraph_render_lods.cpp
+	../xrRender/r__occlusion.cpp
+	../xrRender/r__sector.cpp
+	../xrRender/r__sector_traversal.cpp
+	../xrRender/SH_Atomic.cpp
+	../xrRender/SH_Constant.cpp
+	../xrRender/SH_Matrix.cpp
+	../xrRender/SkeletonAnimated.cpp
+	../xrRender/SkeletonCustom.cpp
+	../xrRender/SkeletonRigid.cpp
+	../xrRender/SkeletonX.cpp
+	../xrRender/TextureDescrManager.cpp
+	../xrRender/tss_def.cpp
+	../xrRender/uber_deffer.cpp
+	../xrRender/WallmarksEngine.cpp
+	../xrRender/xrRender_console.cpp
+)
+
+set(RENDER_HEADERS
+	../xrRender/Animation.h
+	../xrRender/Blender_BmmD.h
+	../xrRender/Blender_detail_still.h
+	../xrRender/Blender_Editor_Selection.h
+	../xrRender/Blender_Editor_Wire.h
+	"../xrRender/Blender_Lm(EbB).h"
+	../xrRender/Blender_Model_EbB.h
+	../xrRender/Blender_Particle.h
+	../xrRender/Blender_Screen_SET.h
+	../xrRender/Blender_tree.h
+	../xrRender/ColorMapManager.h
+	../xrRender/D3DUtils.h
+	../xrRender/D3DXRenderBase.h
+	../xrRender/Debug/dxPixEventWrapper.h
+	../xrRender/du_box.h
+	../xrRender/du_cone.h
+	../xrRender/du_cylinder.h
+	../xrRender/du_sphere.h
+	../xrRender/du_sphere_part.h
+	../xrRender/dxApplicationRender.h
+	../xrRender/dxConsoleRender.h
+	../xrRender/dxDebugRender.h
+	../xrRender/dxEnvironmentRender.h
+	../xrRender/dxFontRender.h
+	../xrRender/dxLensFlareRender.h
+	../xrRender/dxObjectSpaceRender.h
+	../xrRender/dxParticleCustom.h
+	../xrRender/dxRainRender.h
+	../xrRender/dxRenderFactory.h
+	../xrRender/dxStatGraphRender.h
+	../xrRender/dxThunderboltDescRender.h
+	../xrRender/dxThunderboltRender.h
+	../xrRender/dxUIRender.h
+	../xrRender/dxUISequenceVideoItem.h
+	../xrRender/dxUIShader.h
+	../xrRender/dxWallMarkArray.h
+	../xrRender/FLOD.h
+	../xrRender/FProgressive.h
+	../xrRender/FSkinned.h
+	../xrRender/FTreeVisual.h
+	../xrRender/FVisual.h
+	../xrRender/HW.h
+	../xrRender/Light_Render_Direct.h
+	../xrRender/ModelPool.h
+	../xrRender/RenderAllocator.hpp
+	../xrRender/r_sun_cascades.h
+	../xrRender/DetailManager.h
+	../xrRender/DetailModel.h
+	../xrRender/ETextureParams.h
+	../xrRender/FBasicVisual.h
+	../xrRender/FHierrarhyVisual.h
+	../xrRender/FVF.h
+	../xrRender/HOM.h
+	../xrRender/HWCaps.h
+	../xrRender/light.h
+	../xrRender/LightTrack.h
+	../xrRender/Light_DB.h
+	../xrRender/light_gi.h
+	../xrRender/Light_Package.h
+	../xrRender/light_smapvis.h
+	../xrRender/occRasterizer.h
+	../xrRender/ParticleEffect.h
+	../xrRender/ParticleEffectDef.h
+	../xrRender/ParticleGroup.h
+	../xrRender/PSLibrary.h
+	../xrRender/QueryHelper.h
+	../xrRender/ResourceManager.h
+	../xrRender/R_Backend.h
+	../xrRender/R_Backend_hemi.h
+	../xrRender/R_Backend_Runtime.h
+	../xrRender/R_Backend_tree.h
+	../xrRender/R_Backend_xform.h
+	../xrRender/r_constants.h
+	../xrRender/r_constants_cache.h
+	../xrRender/R_DStreams.h
+	../xrRender/r__dsgraph_types.h
+	../xrRender/r__occlusion.h
+	../xrRender/r__sector.h
+	../xrRender/Shader.h
+	../xrRender/SH_Atomic.h
+	../xrRender/SH_Constant.h
+	../xrRender/SH_Matrix.h
+	../xrRender/SH_RT.h
+	../xrRender/SH_Texture.h
+	../xrRender/SkeletonAnimated.h
+	../xrRender/SkeletonCustom.h
+	../xrRender/SkeletonX.h
+	../xrRender/TextureDescrManager.h
+	../xrRender/tss.h
+	../xrRender/tss_def.h
+	../xrRender/uber_deffer.h
+	../xrRender/WallmarksEngine.h
+	../xrRender/xrRender_console.h
+)
+
+set(RENDER_BLENDERS_SOURCES
+	../xrRender/blenders/Blender.cpp
+	../xrRender/blenders/Blender_Palette.cpp
+	../xrRender/blenders/Blender_Recorder.cpp
+)
+
+set(RENDER_BLENDERS_HEADERS
+	../xrRender/blenders/Blender.h
+	../xrRender/blenders/Blender_CLSID.h
+	../xrRender/blenders/Blender_Recorder.h
+)
+
+set(RENDER_INCLUDE_HEADERS
+	../../Include/xrRender/ApplicationRender.h
+	../../Include/xrRender/ConsoleRender.h
+	../../Include/xrRender/DebugRender.h
+	../../Include/xrRender/DebugShader.h
+	../../Include/xrRender/DrawUtils.h
+	../../Include/xrRender/EnvironmentRender.h
+	../../Include/xrRender/FactoryPtr.h
+	../../Include/xrRender/FontRender.h
+	../../Include/xrRender/Kinematics.h
+	../../Include/xrRender/KinematicsAnimated.h
+	../../Include/xrRender/LensFlareRender.h
+	../../Include/xrRender/ObjectSpaceRender.h
+	../../Include/xrRender/ParticleCustom.h
+	../../Include/xrRender/RainRender.h
+	../../Include/xrRender/RenderFactory.h
+	../../Include/xrRender/RenderVisual.h
+	../../Include/xrRender/StatGraphRender.h
+	../../Include/xrRender/ThunderboltDescRender.h
+	../../Include/xrRender/ThunderboltRender.h
+	../../Include/xrRender/UIRender.h
+	../../Include/xrRender/UISequenceVideoItem.h
+	../../Include/xrRender/UIShader.h
+	../../Include/xrRender/WallMarkArray.h
+)
+
+include_directories("." ${CMAKE_SOURCE_DIR} ${CMAKE_SOURCE_DIR}/../Externals/glew/include ${CMAKE_SOURCE_DIR}/../Externals/gli ${CMAKE_SOURCE_DIR}/../Externals/luabind)
+
+add_definitions(-DNO_XR_VDECLARATOR)
+
+add_library(xrRender_GL SHARED ${SOURCES} ${HEADERS}
+	${RENDER_GL_SOURCES} 
+	${RENDER_SOURCES}
+	${RENDER_BLENDERS_SOURCES}
+	${RENDER_INCLUDE_HEADERS}
+)
+
+set_target_properties(xrRender_GL PROPERTIES PREFIX "")
+#target_link_libraries(xrRender_GL ${SDL2_LIBRARY} ${OPENSSL_LIBRARIES} ${LZO_LIBRARIES})
+
+#LuaJIT.lib;nvapi.lib;amd_ags_x86.lib;oalib.lib;opengl32.lib;glu32.lib
